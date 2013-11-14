@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ajl-Te-RTl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="Ajl-Te-RTl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
@@ -8,113 +8,180 @@
         <scene sceneID="Le5-lw-HW6">
             <objects>
                 <viewController id="Ajl-Te-RTl" customClass="FirstViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6Hx-rn-geF"/>
-                        <viewControllerLayoutGuide type="bottom" id="JWV-GX-yQY"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="A5v-et-6QP">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cute_nature-HD.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="yc4-fd-zYb">
-                                <rect key="frame" x="49" y="113" width="245" height="164"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="yHf-R0-JTL" appends="YES" id="6dW-0n-D94"/>
-                                </connections>
-                            </imageView>
-                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="download (1).jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="szm-NX-fdJ">
-                                <rect key="frame" x="664" y="113" width="245" height="164"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Ybc-Al-sge" appends="YES" id="sV0-5b-W85"/>
-                                </connections>
-                            </imageView>
-                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="download.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Ubz-ne-CXh">
-                                <rect key="frame" x="49" y="335" width="245" height="164"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="bf0-Rg-cJb" appends="YES" id="LVk-cw-NRA"/>
-                                </connections>
-                            </imageView>
-                            <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="index.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wLu-hL-40m">
-                                <rect key="frame" x="664" y="335" width="245" height="164"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="UNc-9E-hB7" appends="YES" id="JAf-FR-gK8"/>
-                                </connections>
-                            </imageView>
-                            <imageView tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="six.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gT6-RF-B1e">
-                                <rect key="frame" x="49" y="565" width="245" height="164"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" id="oQn-UR-Yhg">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="0wH-hb-T9L" appends="YES" id="8UH-GE-WIl"/>
-                                </connections>
-                            </imageView>
-                            <imageView tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="images.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="wbi-dx-JIK">
-                                <rect key="frame" x="664" y="565" width="245" height="164"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="VI2-K6-a6Y" appends="YES" id="Ybt-8U-O3r"/>
-                                </connections>
-                            </imageView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="E8b-p6-5qD">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem id="EMl-Tl-c5V">
-                                        <nil key="title"/>
-                                        <barButtonItem key="leftBarButtonItem" id="4oP-ZU-Hxh">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3JZ-nI-HM8">
-                                                <rect key="frame" x="16" y="5" width="170" height="33"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="IF5-X7-o6i">
+                                        <rect key="frame" x="0.0" y="0.0" width="2048" height="768"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cute_nature-HD.jpg" id="yc4-fd-zYb">
+                                                <rect key="frame" x="133" y="110" width="245" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <state key="normal" title="Shuffle">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
+                                                <gestureRecognizers/>
                                                 <connections>
-                                                    <action selector="shuffleAction:" destination="Ajl-Te-RTl" eventType="touchUpInside" id="0mA-w6-83S"/>
+                                                    <outletCollection property="gestureRecognizers" destination="yHf-R0-JTL" appends="YES" id="6dW-0n-D94"/>
                                                 </connections>
-                                            </button>
-                                        </barButtonItem>
-                                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="bhg-8M-jJ0">
-                                            <rect key="frame" x="308" y="6" width="409" height="33"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal">
-                                                <attributedString key="attributedTitle">
-                                                    <fragment content="Rearrange">
-                                                        <attributes>
-                                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                            </state>
-                                            <connections>
-                                                <action selector="rearrangeAction:" destination="Ajl-Te-RTl" eventType="touchUpInside" id="Io4-E9-tDE"/>
-                                            </connections>
-                                        </button>
-                                        <barButtonItem key="rightBarButtonItem" title="Slideshow" id="nJ7-fs-2IL">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DHl-Aq-orG">
-                                                <rect key="frame" x="838" y="5" width="170" height="33"/>
+                                            </imageView>
+                                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download (1).jpeg" id="szm-NX-fdJ">
+                                                <rect key="frame" x="700" y="110" width="245" height="164"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Ybc-Al-sge" appends="YES" id="sV0-5b-W85"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download.jpeg" id="Ubz-ne-CXh">
+                                                <rect key="frame" x="133" y="302" width="245" height="164"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="bf0-Rg-cJb" appends="YES" id="LVk-cw-NRA"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="index.jpg" id="wLu-hL-40m">
+                                                <rect key="frame" x="700" y="302" width="245" height="164"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="UNc-9E-hB7" appends="YES" id="JAf-FR-gK8"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="six.jpg" id="gT6-RF-B1e">
+                                                <rect key="frame" x="133" y="494" width="245" height="164"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="0wH-hb-T9L" appends="YES" id="8UH-GE-WIl"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images.jpeg" id="wbi-dx-JIK">
+                                                <rect key="frame" x="700" y="494" width="245" height="164"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="VI2-K6-a6Y" appends="YES" id="Ybt-8U-O3r"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cute_nature-HD.jpg" id="nk6-jZ-3qc">
+                                                <rect key="frame" x="1157" y="110" width="245" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <state key="normal" title="Slideshow">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
+                                                <gestureRecognizers/>
                                                 <connections>
-                                                    <action selector="slideShowAction:" destination="Ajl-Te-RTl" eventType="touchUpInside" id="vNY-pe-Yeb"/>
+                                                    <outletCollection property="gestureRecognizers" destination="Z9V-ap-sgG" appends="YES" id="grZ-h7-DUb"/>
                                                 </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                                            </imageView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download (1).jpeg" id="hte-5b-e7O">
+                                                <rect key="frame" x="1724" y="110" width="245" height="164"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="1Xz-6F-utE" appends="YES" id="qIy-S6-I28"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download.jpeg" id="UP0-WO-lEg">
+                                                <rect key="frame" x="1157" y="302" width="245" height="164"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="M5C-P2-6TJ" appends="YES" id="Wst-3t-afy"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images.jpeg" id="Liw-HF-olV">
+                                                <rect key="frame" x="1724" y="302" width="245" height="164"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="dNh-lA-yt2" appends="YES" id="0nB-Wb-jsT"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="index.jpg" id="X8z-uG-qk1">
+                                                <rect key="frame" x="1157" y="494" width="245" height="164"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="6ZC-mw-HA7" appends="YES" id="nzp-aE-r8S"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="six.jpg" id="Qx9-bj-hLp">
+                                                <rect key="frame" x="1724" y="494" width="245" height="164"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="H2C-Sk-gd7" appends="YES" id="Igu-OH-ho8"/>
+                                                </connections>
+                                            </imageView>
+                                            <navigationBar contentMode="scaleToFill" barStyle="black" id="E8b-p6-5qD">
+                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <items>
+                                                    <navigationItem id="EMl-Tl-c5V">
+                                                        <nil key="title"/>
+                                                        <barButtonItem key="leftBarButtonItem" id="4oP-ZU-Hxh">
+                                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3JZ-nI-HM8">
+                                                                <rect key="frame" x="16" y="5" width="170" height="33"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <state key="normal" title="Shuffle">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="shuffleAction:" destination="Ajl-Te-RTl" eventType="touchUpInside" id="0mA-w6-83S"/>
+                                                                </connections>
+                                                            </button>
+                                                        </barButtonItem>
+                                                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="bhg-8M-jJ0">
+                                                            <rect key="frame" x="312" y="6" width="400" height="33"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal">
+                                                                <attributedString key="attributedTitle">
+                                                                    <fragment content="Rearrange">
+                                                                        <attributes>
+                                                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="rearrangeAction:" destination="Ajl-Te-RTl" eventType="touchUpInside" id="Io4-E9-tDE"/>
+                                                            </connections>
+                                                        </button>
+                                                        <barButtonItem key="rightBarButtonItem" title="Slideshow" id="nJ7-fs-2IL">
+                                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DHl-Aq-orG">
+                                                                <rect key="frame" x="838" y="5" width="170" height="33"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <state key="normal" title="Slideshow">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="slideShowAction:" destination="Ajl-Te-RTl" eventType="touchUpInside" id="vNY-pe-Yeb"/>
+                                                                </connections>
+                                                            </button>
+                                                        </barButtonItem>
+                                                    </navigationItem>
+                                                </items>
+                                            </navigationBar>
+                                            <navigationBar contentMode="scaleToFill" barStyle="black" id="VSP-XA-miz">
+                                                <rect key="frame" x="1024" y="0.0" width="1024" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <textAttributes key="titleTextAttributes">
+                                                    <color key="textColor" red="0.31154100842664323" green="0.21437613840883307" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </textAttributes>
+                                                <items>
+                                                    <navigationItem title="Move Images" id="0MB-Qk-THy"/>
+                                                </items>
+                                            </navigationBar>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.65713002080000005" green="0.48214089929999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.65713002080000005" green="0.48214089929999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -130,6 +197,7 @@
                         <outlet property="imageViewSix" destination="wbi-dx-JIK" id="UOz-Ll-b85"/>
                         <outlet property="imageViewThree" destination="Ubz-ne-CXh" id="Th5-Je-QxJ"/>
                         <outlet property="imgageViewTwo" destination="szm-NX-fdJ" id="bVW-QK-23j"/>
+                        <outlet property="mScrollView" destination="oQn-UR-Yhg" id="icy-P9-ac7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5OB-yL-Gs6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -163,8 +231,38 @@
                         <action selector="handlePan:" destination="Ajl-Te-RTl" id="Czg-Ug-vxd"/>
                     </connections>
                 </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Z9V-ap-sgG">
+                    <connections>
+                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="UCf-1h-ghm"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="1Xz-6F-utE">
+                    <connections>
+                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="Yxv-NY-xRu"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="M5C-P2-6TJ">
+                    <connections>
+                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="zDI-Oa-10D"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="dNh-lA-yt2">
+                    <connections>
+                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="b88-LD-YS9"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="6ZC-mw-HA7">
+                    <connections>
+                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="gYe-QE-AWA"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="H2C-Sk-gd7">
+                    <connections>
+                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="v0W-ul-W1e"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-553" y="-300"/>
+            <point key="canvasLocation" x="-545" y="-306"/>
         </scene>
     </scenes>
     <resources>

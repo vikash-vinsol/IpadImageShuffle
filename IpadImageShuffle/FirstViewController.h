@@ -17,7 +17,9 @@
 -(IBAction)rearrangeAction:(id)sender;
 -(IBAction)slideShowAction:(UIButton *)sender;
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
+- (IBAction)handlePanTwo:(UIPanGestureRecognizer *)recognizer;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *mScrollView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnShuffle;
 @property (weak, nonatomic) IBOutlet UIButton *btnRearrange;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewOne;
