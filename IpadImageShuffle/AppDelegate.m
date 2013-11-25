@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "FirstViewController.h"
+#import "CanvasViewController.h"
 
 @implementation AppDelegate
 

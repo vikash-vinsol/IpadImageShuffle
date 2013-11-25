@@ -6,24 +6,25 @@
 //  Copyright (c) 2013 Vikash Soni. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "CanvasViewController.h"
 #import "PopOverViewController.h"
 
-@interface FirstViewController ()<UIPopoverControllerDelegate>
-{
-    PopOverViewController *controller;
-    UIPopoverController *popoverController;
-}
+
+#define NUM_Width_Image 245
+#define Num_Height_Image 164
+
+@interface CanvasViewController ()<UIPopoverControllerDelegate>
 
 @end
 
-@implementation FirstViewController
+@implementation CanvasViewController
 {
     CGRect someRect;
-    NSMutableArray *array;
+    NSMutableArray *arrayFrame;
 }
 
 @synthesize imageViewFive,imageViewFour,imageViewOne,imageViewSix,imageViewThree,imgageViewTwo,btnShowSlideShow;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,15 +45,19 @@
     [super viewDidLoad];
     [self.mScrollView setScrollEnabled:YES];
     [self.mScrollView setContentSize:CGSizeMake(2048, 768)];
-    
+    [self addFrame];
+}
+
+-(void)addFrame
+{
     _imageArray = [[NSArray alloc]initWithObjects:imageViewFive,imageViewFour,imageViewOne,imageViewSix,imageViewThree,imgageViewTwo, nil];
-    
+
     int j;
-    array = [[NSMutableArray alloc]init];
+    arrayFrame = [[NSMutableArray alloc]init];
     for (j=0; j<6; j++)
     {
         UIImageView *imageView = [_imageArray objectAtIndex:j];
-        [array addObject:[NSValue valueWithCGRect:imageView.frame]];
+        [arrayFrame addObject:[NSValue valueWithCGRect:imageView.frame]];
     }
 }
 
@@ -64,18 +69,7 @@
 
 -(IBAction)slideShowAction:(id)sender
 {
-    controller = [[PopOverViewController alloc] initWithNibName:@"PopOverViewController" bundle:nil];
-    popoverController = [[UIPopoverController alloc] initWithContentViewController:controller];
 
-    if ([popoverController isPopoverVisible])
-    {
-        [popoverController dismissPopoverAnimated:YES];
-    }
-    else
-    {
-        [popoverController presentPopoverFromBarButtonItem:self.btnShowSlideShow permittedArrowDirections:0 animated:YES];
-        popoverController.popoverContentSize = CGSizeMake(1020, 1400);
-    }
 }
 -(IBAction)rearrangeAction:(id)sender
 {
@@ -87,7 +81,7 @@
                               delay:0.0
                             options: UIViewAnimationOptionCurveEaseOut
                          animations:^{
-                                        [image setFrame:[[array objectAtIndex:i] CGRectValue]];
+                                        [image setFrame:[[arrayFrame objectAtIndex:i] CGRectValue]];
                                      }
                          completion:^(BOOL finished)
          {
@@ -95,7 +89,6 @@
          }];
     }
 }
-
 
 -(IBAction)shuffleAction:(id)sender
 {
@@ -107,7 +100,7 @@
                               delay:0.0
                             options: UIViewAnimationOptionCurveEaseOut
                          animations:^{
-                                        [image setFrame:CGRectMake((arc4random()%700), (arc4random()%600), 300, 200)];
+                                        [image setFrame:CGRectMake((arc4random()%700), (arc4random()%600), NUM_Width_Image, Num_Height_Image)];
                                     }
                          completion:^(BOOL finished)
                         {
@@ -116,56 +109,39 @@
     }
 }
 
+-(void) selectPanAction:(NSInteger) xHeight : (NSInteger) xWidth :(NSInteger) yHeight : (NSInteger) yWidth : (UIPanGestureRecognizer *) recognizer
+{
+    CGPoint translation = [recognizer translationInView:self.view];
+    recognizer.view.center = CGPointMake(recognizer.view.center.x + translation.x, recognizer.view.center.y + translation.y);
+    [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
+    
+    if (recognizer.state == UIGestureRecognizerStateEnded)
+    {
+        CGPoint velocity = [recognizer velocityInView:self.view];
+        CGFloat magnitude = sqrtf((velocity.x * velocity.x) + (velocity.y * velocity.y));
+        CGFloat slideMult = magnitude / 200;
+        
+        float slideFactor = 0.05 * slideMult; // Increase for more of a slide
+        CGPoint finalPoint = CGPointMake(recognizer.view.center.x + (velocity.x * slideFactor), recognizer.view.center.y + (velocity.y * slideFactor));
+        finalPoint.x = MIN(MAX(finalPoint.x, xHeight), self.view.bounds.size.width-xWidth);
+        finalPoint.y = MIN(MAX(finalPoint.y, yHeight), self.view.bounds.size.height-yHeight);
+        [UIView animateWithDuration:slideFactor*2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            recognizer.view.center = finalPoint;
+            
+        } completion:nil];
+        
+    }
+}
+
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer
 {
-    CGPoint translation = [recognizer translationInView:self.view];
-    recognizer.view.center = CGPointMake(recognizer.view.center.x + translation.x, recognizer.view.center.y + translation.y);
-    [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
-    
-    if (recognizer.state == UIGestureRecognizerStateEnded)
-    {
-        CGPoint velocity = [recognizer velocityInView:self.view];
-        CGFloat magnitude = sqrtf((velocity.x * velocity.x) + (velocity.y * velocity.y));
-        CGFloat slideMult = magnitude / 200;
-        NSLog(@"magnitude: %f, slideMult: %f", magnitude, slideMult);
-        
-        float slideFactor = 0.1 * slideMult; // Increase for more of a slide
-        CGPoint finalPoint = CGPointMake(recognizer.view.center.x + (velocity.x * slideFactor), recognizer.view.center.y + (velocity.y * slideFactor));
-        finalPoint.x = MIN(MAX(finalPoint.x, 0), self.view.bounds.size.width-150);
-        finalPoint.y = MIN(MAX(finalPoint.y, 120), self.view.bounds.size.height);
-        [UIView animateWithDuration:slideFactor*2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            recognizer.view.center = finalPoint;
-        } completion:nil];
-    }
+    [self selectPanAction:NUM_Width_Image/2 :150 :130 :80 :recognizer];
 }
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+- (IBAction)handlePanTwo:(UIPanGestureRecognizer *)recognizer2
 {
-    return YES;
+    [self selectPanAction:1154 :-900 :0 :0 :recognizer2];
 }
 
-
-- (IBAction)handlePanTwo:(UIPanGestureRecognizer *)recognizer
-{
-    CGPoint translation = [recognizer translationInView:self.view];
-    recognizer.view.center = CGPointMake(recognizer.view.center.x + translation.x, recognizer.view.center.y + translation.y);
-    [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
-    
-    if (recognizer.state == UIGestureRecognizerStateEnded)
-    {
-        CGPoint velocity = [recognizer velocityInView:self.view];
-        CGFloat magnitude = sqrtf((velocity.x * velocity.x) + (velocity.y * velocity.y));
-        CGFloat slideMult = magnitude / 200;
-        NSLog(@"magnitude: %f, slideMult: %f", magnitude, slideMult);
-        
-        float slideFactor = 0.1 * slideMult; // Increase for more of a slide
-        CGPoint finalPoint = CGPointMake(recognizer.view.center.x + (velocity.x * slideFactor), recognizer.view.center.y + (velocity.y * slideFactor));
-        finalPoint.x = MIN(MAX(finalPoint.x, 1154), self.view.bounds.size.width+900);
-        finalPoint.y = MIN(MAX(finalPoint.y, 0), self.view.bounds.size.height);
-        [UIView animateWithDuration:slideFactor*2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            recognizer.view.center = finalPoint;
-        } completion:nil];
-    }
-}
 
 @end

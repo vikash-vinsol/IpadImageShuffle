@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AFED01F9-1FFC-4B71-96EF-0834140A39D7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>IpadImageShuffle</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DD38B74A-C70C-4658-923C-FA8FDC5C4187</key>
+		<string>ssh://github.com/vikash-vinsol/IpadImageShuffle.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>IpadImageShuffle.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DD38B74A-C70C-4658-923C-FA8FDC5C4187</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/vikash-vinsol/IpadImageShuffle.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DD38B74A-C70C-4658-923C-FA8FDC5C4187</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DD38B74A-C70C-4658-923C-FA8FDC5C4187</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IpadImageShuffle</string>
+		</dict>
+	</array>
+</dict>
+</plist>

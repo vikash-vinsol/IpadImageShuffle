@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="Ajl-Te-RTl">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--First View Controller-->
+        <!--Canvas View Controller-->
         <scene sceneID="Le5-lw-HW6">
             <objects>
-                <viewController id="Ajl-Te-RTl" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController id="Ajl-Te-RTl" customClass="CanvasViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A5v-et-6QP">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" id="oQn-UR-Yhg">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="oQn-UR-Yhg">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
@@ -161,6 +161,9 @@
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="slideShowAction:" destination="Ajl-Te-RTl" eventType="touchUpInside" id="vNY-pe-Yeb"/>
+                                                                    <segue destination="5IS-C6-mFo" kind="popover" identifier="popSegue" popoverAnchorView="DHl-Aq-orG" id="qcA-I4-sip">
+                                                                        <popoverArrowDirection key="popoverArrowDirection"/>
+                                                                    </segue>
                                                                 </connections>
                                                             </button>
                                                         </barButtonItem>
@@ -233,36 +236,61 @@
                 </panGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="Z9V-ap-sgG">
                     <connections>
-                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="UCf-1h-ghm"/>
+                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="JM5-Jb-Nsb"/>
                     </connections>
                 </panGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="1Xz-6F-utE">
                     <connections>
-                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="Yxv-NY-xRu"/>
+                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="fzH-ev-JAx"/>
                     </connections>
                 </panGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="M5C-P2-6TJ">
                     <connections>
-                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="zDI-Oa-10D"/>
+                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="2nc-eq-1bb"/>
                     </connections>
                 </panGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="dNh-lA-yt2">
                     <connections>
-                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="b88-LD-YS9"/>
+                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="pkJ-j6-IfO"/>
                     </connections>
                 </panGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="6ZC-mw-HA7">
                     <connections>
-                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="gYe-QE-AWA"/>
+                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="fMJ-ju-pN1"/>
                     </connections>
                 </panGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="H2C-Sk-gd7">
                     <connections>
-                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="v0W-ul-W1e"/>
+                        <action selector="handlePanTwo:" destination="Ajl-Te-RTl" id="Hgl-8J-CG0"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-545" y="-306"/>
+            <point key="canvasLocation" x="-763" y="-291"/>
+        </scene>
+        <!--Pop Over View Controller-->
+        <scene sceneID="iMG-Jb-Abv">
+            <objects>
+                <viewController id="5IS-C6-mFo" customClass="PopOverViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PbG-Gf-EJU">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1400"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6DL-kk-i8x">
+                                <rect key="frame" x="0.0" y="0.0" width="1000" height="1400"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="imgView" destination="6DL-kk-i8x" id="Xze-wE-Ljv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gE8-we-Emp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505" y="-607"/>
         </scene>
     </scenes>
     <resources>

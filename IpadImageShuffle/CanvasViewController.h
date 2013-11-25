@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController<UIGestureRecognizerDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface CanvasViewController : UIViewController <UIGestureRecognizerDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     NSArray *_imageArray;
 }
@@ -16,8 +16,8 @@
 -(IBAction)shuffleAction:(id)sender;
 -(IBAction)rearrangeAction:(id)sender;
 -(IBAction)slideShowAction:(UIButton *)sender;
-- (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
-- (IBAction)handlePanTwo:(UIPanGestureRecognizer *)recognizer;
+-(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
+-(IBAction)handlePanTwo:(UIPanGestureRecognizer *)recognizer;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *mScrollView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnShuffle;
@@ -29,9 +29,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewFive;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnShowSlideShow;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewSix;
-
-
-
-
 
 @end

@@ -8,9 +8,10 @@
 
 #import "PopOverViewController.h"
 #import "SingleTonArray.h"
-#import "FirstViewController.h"
+#import "CanvasViewController.h"
 
 @interface PopOverViewController ()
+
 {
     NSTimer *timer;
     int currentImage;
@@ -83,6 +84,5 @@
     [timer invalidate];
     timer = nil;
 }
-
 
 @end

@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FirstViewController.h"
+#import "CanvasViewController.h"
 
-@interface PopOverViewController : UIViewController
+@interface PopOverViewController : UIViewController<UIPopoverControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
 
 @end

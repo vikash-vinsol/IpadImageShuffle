@@ -23,7 +23,7 @@
 		EBCC479B18334E840014082C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCC477618334E840014082C /* CoreData.framework */; };
 		EBCC47A318334E840014082C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBCC47A118334E840014082C /* InfoPlist.strings */; };
 		EBCC47A518334E840014082C /* IpadImageShuffleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCC47A418334E840014082C /* IpadImageShuffleTests.m */; };
-		EBCC47B018334EF90014082C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCC47AF18334EF90014082C /* FirstViewController.m */; };
+		EBCC47B018334EF90014082C /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCC47AF18334EF90014082C /* CanvasViewController.m */; };
 		EBCC47B71833530F0014082C /* cute_nature-HD.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EBCC47B11833530F0014082C /* cute_nature-HD.jpg */; };
 		EBCC47B81833530F0014082C /* download (1).jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EBCC47B21833530F0014082C /* download (1).jpeg */; };
 		EBCC47B91833530F0014082C /* download.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EBCC47B31833530F0014082C /* download.jpeg */; };
@@ -31,7 +31,6 @@
 		EBCC47BB1833530F0014082C /* index.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EBCC47B51833530F0014082C /* index.jpg */; };
 		EBCC47BC1833530F0014082C /* six.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EBCC47B61833530F0014082C /* six.jpg */; };
 		EBCC47C61833C6980014082C /* PopOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCC47C41833C6980014082C /* PopOverViewController.m */; };
-		EBCC47C71833C6980014082C /* PopOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBCC47C51833C6980014082C /* PopOverViewController.xib */; };
 		EBCC47CA1833DA2F0014082C /* SingleTonArray.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCC47C91833DA2F0014082C /* SingleTonArray.m */; };
 /* End PBXBuildFile section */
 
@@ -65,8 +64,8 @@
 		EBCC47A018334E840014082C /* IpadImageShuffleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IpadImageShuffleTests-Info.plist"; sourceTree = "<group>"; };
 		EBCC47A218334E840014082C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EBCC47A418334E840014082C /* IpadImageShuffleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IpadImageShuffleTests.m; sourceTree = "<group>"; };
-		EBCC47AE18334EF90014082C /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		EBCC47AF18334EF90014082C /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		EBCC47AE18334EF90014082C /* CanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasViewController.h; sourceTree = "<group>"; };
+		EBCC47AF18334EF90014082C /* CanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasViewController.m; sourceTree = "<group>"; };
 		EBCC47B11833530F0014082C /* cute_nature-HD.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cute_nature-HD.jpg"; sourceTree = "<group>"; };
 		EBCC47B21833530F0014082C /* download (1).jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "download (1).jpeg"; sourceTree = "<group>"; };
 		EBCC47B31833530F0014082C /* download.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download.jpeg; sourceTree = "<group>"; };
@@ -75,7 +74,6 @@
 		EBCC47B61833530F0014082C /* six.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = six.jpg; sourceTree = "<group>"; };
 		EBCC47C31833C6980014082C /* PopOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopOverViewController.h; sourceTree = "<group>"; };
 		EBCC47C41833C6980014082C /* PopOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopOverViewController.m; sourceTree = "<group>"; };
-		EBCC47C51833C6980014082C /* PopOverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopOverViewController.xib; sourceTree = "<group>"; };
 		EBCC47C81833DA2F0014082C /* SingleTonArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleTonArray.h; path = IpadImageShuffle/SingleTonArray.h; sourceTree = "<group>"; };
 		EBCC47C91833DA2F0014082C /* SingleTonArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SingleTonArray.m; path = IpadImageShuffle/SingleTonArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,11 +143,10 @@
 				EBCC478118334E840014082C /* AppDelegate.h */,
 				EBCC478218334E840014082C /* AppDelegate.m */,
 				EBCC478418334E840014082C /* Main.storyboard */,
-				EBCC47AE18334EF90014082C /* FirstViewController.h */,
-				EBCC47AF18334EF90014082C /* FirstViewController.m */,
+				EBCC47AE18334EF90014082C /* CanvasViewController.h */,
+				EBCC47AF18334EF90014082C /* CanvasViewController.m */,
 				EBCC47C31833C6980014082C /* PopOverViewController.h */,
 				EBCC47C41833C6980014082C /* PopOverViewController.m */,
-				EBCC47C51833C6980014082C /* PopOverViewController.xib */,
 				EBCC479018334E840014082C /* Images.xcassets */,
 				EBCC478718334E840014082C /* IpadImageShuffle.xcdatamodeld */,
 				EBCC477918334E840014082C /* Supporting Files */,
@@ -276,7 +273,6 @@
 				EBCC47BA1833530F0014082C /* images.jpeg in Resources */,
 				EBCC477D18334E840014082C /* InfoPlist.strings in Resources */,
 				EBCC478618334E840014082C /* Main.storyboard in Resources */,
-				EBCC47C71833C6980014082C /* PopOverViewController.xib in Resources */,
 				EBCC47B91833530F0014082C /* download.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +297,7 @@
 				EBCC478918334E840014082C /* IpadImageShuffle.xcdatamodeld in Sources */,
 				EBCC47C61833C6980014082C /* PopOverViewController.m in Sources */,
 				EBCC477F18334E840014082C /* main.m in Sources */,
-				EBCC47B018334EF90014082C /* FirstViewController.m in Sources */,
+				EBCC47B018334EF90014082C /* CanvasViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +508,7 @@
 				EBCC47AA18334E840014082C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EBCC47AB18334E840014082C /* Build configuration list for PBXNativeTarget "IpadImageShuffleTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +517,7 @@
 				EBCC47AD18334E840014082C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
